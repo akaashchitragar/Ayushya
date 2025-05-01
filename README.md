@@ -60,7 +60,7 @@ Ayushya is a cross-platform mobile application that provides personalized Ayurve
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ayushya.git
+git clone https://github.com/akaashchitragar/ayushya.git
 
 # Navigate to the project directory
 cd ayushya
@@ -96,4 +96,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-For any inquiries, please reach out to [akash@webart4u.com](mailto:akash@webart4u.com). 
+For any inquiries, please reach out to [akash@webart4u.com](mailto:akash@webart4u.com).
