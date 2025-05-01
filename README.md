@@ -1,7 +1,5 @@
 # Ayushya
 
-![Ayushya Logo](assets/logo.png)
-
 *"Ayushya" (आयुष्य) - Life & Longevity through Ancient Wisdom*
 
 ## About the App
