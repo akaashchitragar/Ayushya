@@ -1,55 +1,66 @@
-# Ayushya
+# 🌿 Ayushya
 
-*"Ayushya" (आयुष्य) - Life & Longevity through Ancient Wisdom*
+<div align="center">
+  
+  ![Ayurvedic Wellness](https://img.shields.io/badge/Ayurvedic-Wellness-brightgreen?style=for-the-badge&logo=leaf&logoColor=white)
+  ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+  ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+  ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+  
+  *"Ayushya" (आयुष्य) - Life & Longevity through Ancient Wisdom*
+  
+</div>
 
-## About the App
+## ✨ About the App
 
 Ayushya is an Android mobile application that provides personalized Ayurvedic recommendations based on traditional scriptures. It combines ancient Ayurvedic knowledge with modern AI to deliver remedies tailored to individual users.
 
-### Key Features
+### 🎯 Key Features
 
-- **Profile Management**: Captures detailed Ayurvedic constitution in two parts:
-  - **Fixed Profile** (entered once): Body frame and build, skin type, and hair type
-  - **Consultation Profile** (answered per remedy): Temperature regulation, appetite and digestion, sleep patterns, mental and emotional tendencies, digestive health, stress response, and current health conditions
-- **Remedy Consultation**: Provides personalized remedies based on symptoms the User inputs, individual constitution, and references to classical Ayurvedic texts like Charaka Samhita, Sushruta Samhita, and Ashtanga Hridaya.
-- **Multilingual Support**: Access content in multiple languages, especially those spoken in regions where Ayurveda is popular.
+- **📊 Profile Management**: Captures detailed Ayurvedic constitution in two parts:
+  - **📝 Fixed Profile** (entered once): Body frame and build, skin type, and hair type
+  - **🔄 Consultation Profile** (answered per remedy): Temperature regulation, appetite and digestion, sleep patterns, mental and emotional tendencies, digestive health, stress response, and current health conditions
+- **💊 Remedy Consultation**: Provides personalized remedies based on symptoms the User inputs, individual constitution, and references to classical Ayurvedic texts like Charaka Samhita, Sushruta Samhita, and Ashtanga Hridaya.
+- **🌐 Multilingual Support**: Access content in multiple languages, especially those spoken in regions where Ayurveda is popular.
 
-### App Flow
+### 🔄 App Flow
 
-1. **Authentication**: User logs in using Google or Facebook account
-2. **Basic Profile**: User enters name, gender, age, blood group, height, and weight
-3. **Fixed Profile**: User answers questions about body frame and build, skin type, and hair type
-4. **Consultation Profile**: User provides information about current health status including temperature regulation, digestion, sleep patterns, etc.
-5. **Remedy Screen**: User describes specific symptoms they're experiencing (e.g., flowing nose, headache, sore eyes)
-6. **AI Processing**: Advanced AI models (Gemini 1.5 Pro/Ultra or GPT-4) process user symptoms along with both fixed and consultation profile data
-7. **Personalized Recommendations**: User receives authentic Ayurvedic home remedies based on traditional scriptures:
+1. **🔐 Authentication**: User logs in using Google or Facebook account
+2. **👤 Basic Profile**: User enters name, gender, age, blood group, height, and weight
+3. **🧬 Fixed Profile**: User answers questions about body frame and build, skin type, and hair type
+4. **📋 Consultation Profile**: User provides information about current health status including temperature regulation, digestion, sleep patterns, etc.
+5. **🩺 Remedy Screen**: User describes specific symptoms they're experiencing (e.g., flowing nose, headache, sore eyes)
+6. **🧠 AI Processing**: Advanced AI models (Gemini 1.5 Pro/Ultra or GPT-4) process user symptoms along with both fixed and consultation profile data
+7. **💫 Personalized Recommendations**: User receives authentic Ayurvedic home remedies based on traditional scriptures:
    - Charaka Samhita
    - Sushruta Samhita
    - Ashtanga Hridaya
    - Other traditional sources
-8. **Results Display**: Remedies are presented with references to their traditional sources
+8. **📱 Results Display**: Remedies are presented with references to their traditional sources
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Frontend
+### 📱 Frontend
 - **Framework**: React Native with Expo (Latest stable release)
 - **State Management**: 
   - React Context API
   - Redux or Zustand
   - React Hooks
 - **UI Design**: 
-  - React Native Paper or UI Kitten for Material Design
-  - Adaptive layouts for different Android screen sizes
-  - Material Design 3 principles
+  - React Native Paper for Material Design implementation
+  - Material Design 3 principles with adaptive layouts
+  - Theming system for Ayurvedic color palette
   - **Color Palette**: Ayurvedic-inspired natural and vibrant earthy tones:
-    - Turmeric gold (#FFCC33)
-    - Fresh leaf green (#88CC66)
-    - Hibiscus red (#FF6666)
-    - Marigold orange (#FFAA33)
-    - Sky blue (#66CCFF)
-    - Lotus pink (#FF99CC)
-    - Vibrant saffron (#FF5722)
-    - Sunlight yellow (#FFDD44)
+    - <span style="color:#FFCC33">■</span> Turmeric gold (#FFCC33)
+    - <span style="color:#88CC66">■</span> Fresh leaf green (#88CC66)
+    - <span style="color:#FF6666">■</span> Hibiscus red (#FF6666)
+    - <span style="color:#FFAA33">■</span> Marigold orange (#FFAA33)
+    - <span style="color:#66CCFF">■</span> Sky blue (#66CCFF)
+    - <span style="color:#FF99CC">■</span> Lotus pink (#FF99CC)
+    - <span style="color:#FF5722">■</span> Vibrant saffron (#FF5722)
+    - <span style="color:#FFDD44">■</span> Sunlight yellow (#FFDD44)
 - **Navigation**:
   - React Navigation for screen transitions
 - **Animation**: 
@@ -61,66 +72,66 @@ Ayushya is an Android mobile application that provides personalized Ayurvedic re
   - `@react-native-async-storage/async-storage` for local storage
   - `axios` for API communication
 
-### Backend
-- **Framework**: Django (Latest stable release)
-  - Django REST Framework for RESTful API
-  - Django ORM for database operations
-- **Database**: PostgreSQL
+### 🖥️ Backend
+- **Framework**: Node.js with Express.js
+  - RESTful API endpoints
+  - Middleware-based architecture
+  - TypeScript for type safety
+- **Database**: MongoDB with Mongoose
+  - Document-based data model for flexible Ayurvedic profiles
+  - Scalable for growing user base
 - **Authentication**: 
   - Clerk Authentication
   - JWT token verification
-  - Social login (Google, Facebook, Apple)
+  - Social login (Google, Facebook)
 - **Storage**: AWS S3 for user data and assets
 - **API Documentation**: 
   - Swagger/OpenAPI
-  - DRF Spectacular
+  - Express OpenAPI validation
 
-### AI/ML
+### 🧠 AI/ML
 - **Primary AI Model**: Gemini 1.5 Pro/Ultra
 - **Alternative AI Model**: GPT-4/GPT-4o
 - **Integration**: 
-  - `google-generativeai` Python package for Gemini
-  - `openai` Python package for GPT models
-  - Asynchronous processing with Celery
+  - `@google/generative-ai` package for Gemini
+  - `openai` package for GPT models
+  - Background job processing with Bull queue
 
-### Hosting
+### ☁️ Hosting
 - **Cloud Provider**: AWS
 - **Services**:
   - AWS Amplify for hosting (if web support is added)
   - Amazon S3 for static assets
   - Amazon CloudFront for content delivery
 
-### Analytics and Monitoring
+### 📊 Analytics and Monitoring
 - **Analytics**: Firebase Analytics
 - **Error Monitoring**: Sentry
 - **Performance Monitoring**: Firebase Performance
 
-### Payment Integration
+### 💳 Payment Integration
 - **Payment Gateway**: Razorpay
 - **In-App Purchases**: 
   - React Native In-App Purchase for Android
   - Google Play Billing Library
 
-### Push Notifications
+### 📲 Push Notifications
 - **Service**: OneSignal
 - **Local Notifications**: expo-notifications
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 16.0.0 or higher
+### 📋 Prerequisites
+- Node.js 18.0.0 or higher
 - Yarn or npm
 - Expo CLI (`npm install -g expo-cli`)
-- Python 3.10 or higher
-- Django 4.2 or higher
-- PostgreSQL
-- Firebase project
+- MongoDB (local or Atlas)
 - AWS account
 - Razorpay merchant account
 - Google/OpenAI API keys for AI integration
 - Clerk account for authentication
 
-### Installation
+### 💻 Installation
 ```bash
 # Clone the repository
 git clone https://github.com/akaashchitragar/ayushya.git
@@ -136,10 +147,9 @@ npm install
 
 # Backend setup
 cd ../backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py migrate
+yarn install
+# or
+npm install
 
 # Start the development servers
 # Terminal 1 - Frontend
@@ -148,10 +158,10 @@ expo start
 
 # Terminal 2 - Backend
 cd backend
-python manage.py runserver
+npm run dev
 ```
 
-### Building for Production
+### 📦 Building for Production
 ```bash
 # Build for Android
 expo build:android
@@ -163,20 +173,19 @@ eas build --platform android
 eas build --profile development --platform android
 ```
 
-### Environment Setup
+### ⚙️ Environment Setup
 Create a `.env` file in the frontend directory with the following variables:
 ```
 REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_*****
-REACT_APP_API_URL=http://localhost:8000/api
+REACT_APP_API_URL=http://localhost:4000/api
 REACT_APP_GOOGLE_AI_API_KEY=AIzaSyD5xr3CEnK7grZ16_aJmpLh7bfUOVwipuY
 ```
 
 Create a `.env` file in the backend directory with the following variables:
 ```
-SECRET_KEY=your-django-secret-key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-DATABASE_URL=postgres://user:password@localhost:5432/ayushya
+PORT=4000
+NODE_ENV=development
+MONGODB_URI=mongodb://localhost:27017/ayushya
 CLERK_SECRET_KEY=sk_test_*****
 GOOGLE_AI_API_KEY=AIzaSyD5xr3CEnK7grZ16_aJmpLh7bfUOVwipuY
 OPENAI_API_KEY=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
@@ -185,7 +194,7 @@ AWS_SECRET_ACCESS_KEY=your-aws-secret-key
 AWS_STORAGE_BUCKET_NAME=ayushya-storage
 ```
 
-## Project Structure
+## 📁 Project Structure
 ```
 ayushya/
 ├── frontend/
@@ -216,34 +225,53 @@ ayushya/
 │   ├── metro.config.js           # Metro bundler configuration
 │   ├── eas.json                  # EAS Build configuration
 │   ├── package.json              # Dependencies
-│   └── tsconfig.json             # TypeScript configuration (if using TypeScript)
+│   └── tsconfig.json             # TypeScript configuration
 ├── backend/
-│   ├── ayushya/                  # Django project directory
-│   │   ├── settings.py           # Django settings
-│   │   ├── urls.py               # URL routing
-│   │   └── wsgi.py               # WSGI configuration
-│   ├── api/                      # Django app for API
-│   │   ├── models.py             # Database models
-│   │   ├── serializers.py        # DRF serializers
-│   │   ├── views.py              # API views
-│   │   └── urls.py               # API URL routing
-│   ├── authentication/           # Django app for Clerk auth
-│   │   ├── middleware.py         # JWT verification
-│   │   └── utils.py              # Auth utilities
-│   ├── ai/                       # Django app for AI integration
-│   │   ├── gemini_service.py     # Gemini API integration
-│   │   ├── openai_service.py     # OpenAI API integration
-│   │   └── views.py              # AI API endpoints
-│   ├── manage.py                 # Django management script
-│   └── requirements.txt          # Python dependencies
+│   ├── src/
+│   │   ├── config/               # Configuration files
+│   │   │   ├── database.js       # MongoDB connection
+│   │   │   └── env.js            # Environment variables
+│   │   ├── controllers/          # Request handlers
+│   │   │   ├── profileController.js  # User profile handlers
+│   │   │   ├── consultationController.js  # Consultation handlers
+│   │   │   └── remedyController.js  # Remedy handlers
+│   │   ├── middleware/           # Express middleware
+│   │   │   ├── auth.js           # Authentication middleware
+│   │   │   └── errorHandler.js   # Error handling
+│   │   ├── models/               # MongoDB schemas
+│   │   │   ├── User.js           # User model
+│   │   │   ├── Profile.js        # Profile model
+│   │   │   └── Remedy.js         # Remedy model
+│   │   ├── routes/               # API routes
+│   │   │   ├── profileRoutes.js  # Profile endpoints
+│   │   │   ├── consultationRoutes.js  # Consultation endpoints
+│   │   │   └── remedyRoutes.js   # Remedy endpoints
+│   │   ├── services/             # Business logic
+│   │   │   ├── geminiService.js  # Gemini API integration
+│   │   │   └── openaiService.js  # OpenAI API integration
+│   │   ├── utils/                # Helper functions
+│   │   │   └── asyncHandler.js   # Async error handling
+│   │   └── app.js                # Express app setup
+│   ├── package.json              # Dependencies
+│   └── tsconfig.json             # TypeScript configuration
 └── README.md                     # Project documentation
 ```
 
-## Contributing
+## 👥 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+
+## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Contact
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+## 📞 Contact
 For any inquiries, please reach out to [akash@webart4u.com](mailto:akash@webart4u.com).
+
+---
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20for-Ayurvedic%20Wellness-orange" alt="Made with love for Ayurvedic Wellness" />
+</div>
