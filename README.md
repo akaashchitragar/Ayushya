@@ -17,6 +17,51 @@
 
 Ayushya is an Android mobile application that provides personalized Ayurvedic recommendations based on traditional scriptures. It combines ancient Ayurvedic knowledge with modern AI to deliver remedies tailored to individual users.
 
+## 🔍 How It Works - A Practical Example
+
+Imagine you're experiencing cold symptoms and a headache. Here's how Ayushya helps you:
+
+1. **Open the App** - Login with your existing account
+  
+2. **Your Profile is Ready** - The app already knows your body type (Vata/Pitta/Kapha), constitution, and health baseline from your previously entered profile
+
+3. **Describe Your Symptoms** - Simply type or speak: "I have a cold with runny nose and a throbbing headache since yesterday"
+
+4. **Behind the Scenes** - The AI analyzes:
+   - Your symptoms (cold, runny nose, headache)
+   - Your body constitution (from your profile)
+   - Your health history and preferences
+   - Traditional Ayurvedic texts for matching conditions
+
+5. **Personalized Results** - Within seconds, you receive personalized home remedies:
+
+   ```
+   🌿 RECOMMENDED HOME REMEDIES FOR YOUR COLD & HEADACHE:
+
+   1. Ginger-Tulsi Tea
+      • Boil 1 cup water with 1-inch fresh ginger
+      • Add 5-7 fresh tulsi (holy basil) leaves
+      • Steep for 5 minutes, strain and add honey to taste
+      • Drink warm 2-3 times daily
+   
+   2. Steam Inhalation with Ajwain
+      • Boil water in a pot
+      • Add 1 tsp carom seeds (ajwain)
+      • Inhale the steam for 5-10 minutes
+      • Cover head with towel for better effect
+   
+   3. Turmeric Milk
+      • Heat 1 cup milk with ¼ tsp turmeric powder
+      • Add pinch of black pepper and ½ tsp ghee
+      • Drink before bedtime
+   
+   SOURCE: Charaka Samhita, Sutrasthana 5:62-65
+   ```
+
+6. **Save for Later** - Save these remedies to your profile for future reference or share with family
+
+This personalized approach considers your unique constitution rather than providing generic remedies, making the treatment more effective according to Ayurvedic principles.
+
 ### 🎯 Key Features
 
 - **📊 Profile Management**: Captures detailed Ayurvedic constitution in two parts:
