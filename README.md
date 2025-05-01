@@ -4,7 +4,7 @@
 
 ## About the App
 
-Ayushya is a cross-platform mobile application that provides personalized Ayurvedic recommendations based on traditional scriptures. It combines ancient Ayurvedic knowledge with modern AI to deliver remedies tailored to individual users.
+Ayushya is an Android mobile application that provides personalized Ayurvedic recommendations based on traditional scriptures. It combines ancient Ayurvedic knowledge with modern AI to deliver remedies tailored to individual users.
 
 ### Key Features
 
@@ -32,46 +32,56 @@ Ayushya is a cross-platform mobile application that provides personalized Ayurve
 ## Tech Stack
 
 ### Frontend
-- **Framework**: Flutter 3.19+ (Latest stable release)
+- **Framework**: React Native with Expo (Latest stable release)
 - **State Management**: 
-  - Riverpod 2.0+
-  - Flutter Hooks
+  - React Context API
+  - Redux or Zustand
+  - React Hooks
 - **UI Design**: 
-  - Material 3 (Material You) design system
-  - Adaptive and responsive layouts
-  - Dynamic theming with color extraction
-  - **Color Palette**: Ayurvedic-inspired natural and earthy tones:
-    - Turmeric gold (#E4A11B)
-    - Neem green (#728C69)
-    - Terracotta (#C97C5D)
-    - Sandalwood (#B49A67)
-    - Ashwagandha root (#8D6E63)
-    - Aloe Vera (#A6BB8D)
-    - Deep herbal brown (#5D4037)
+  - React Native Paper or UI Kitten for Material Design
+  - Adaptive layouts for different Android screen sizes
+  - Material Design 3 principles
+  - **Color Palette**: Ayurvedic-inspired natural and vibrant earthy tones:
+    - Turmeric gold (#FFCC33)
+    - Fresh leaf green (#88CC66)
+    - Hibiscus red (#FF6666)
+    - Marigold orange (#FFAA33)
+    - Sky blue (#66CCFF)
+    - Lotus pink (#FF99CC)
     - Vibrant saffron (#FF5722)
+    - Sunlight yellow (#FFDD44)
+- **Navigation**:
+  - React Navigation for screen transitions
 - **Animation**: 
   - Lottie for rich animations
-  - Flutter animations for micro-interactions
+  - React Native Reanimated for micro-interactions
 - **Dependencies**:
-  - `flutter_localizations` for internationalization
-  - `flutter_svg` for vector graphics
-  - `shared_preferences` for local storage
-  - `http`/`dio` for API communication
+  - `i18next` for internationalization
+  - `react-native-svg` for vector graphics
+  - `@react-native-async-storage/async-storage` for local storage
+  - `axios` for API communication
 
 ### Backend
-- **Backend as a Service**: Supabase (Latest version)
-- **Database**: Supabase (PostgreSQL)
+- **Framework**: Django (Latest stable release)
+  - Django REST Framework for RESTful API
+  - Django ORM for database operations
+- **Database**: PostgreSQL
 - **Authentication**: 
-  - Supabase Auth
-  - Social login (Google, Facebook)
-- **Storage**: Supabase Storage for user data and assets
+  - Clerk Authentication
+  - JWT token verification
+  - Social login (Google, Facebook, Apple)
+- **Storage**: AWS S3 for user data and assets
+- **API Documentation**: 
+  - Swagger/OpenAPI
+  - DRF Spectacular
 
 ### AI/ML
 - **Primary AI Model**: Gemini 1.5 Pro/Ultra
 - **Alternative AI Model**: GPT-4/GPT-4o
 - **Integration**: 
-  - Google AI SDK for Flutter
-  - OpenAI API via REST
+  - `google-generativeai` Python package for Gemini
+  - `openai` Python package for GPT models
+  - Asynchronous processing with Celery
 
 ### Hosting
 - **Cloud Provider**: AWS
@@ -88,23 +98,27 @@ Ayushya is a cross-platform mobile application that provides personalized Ayurve
 ### Payment Integration
 - **Payment Gateway**: Razorpay
 - **In-App Purchases**: 
-  - Google Play Billing
-  - Apple In-App Purchase
+  - React Native In-App Purchase for Android
+  - Google Play Billing Library
 
 ### Push Notifications
-- **Service**: Firebase Cloud Messaging (FCM)
-- **Local Notifications**: flutter_local_notifications
+- **Service**: OneSignal
+- **Local Notifications**: expo-notifications
 
 ## Getting Started
 
 ### Prerequisites
-- Flutter SDK 3.19.0 or higher
-- Dart SDK 3.2.0 or higher
-- Supabase account
+- Node.js 16.0.0 or higher
+- Yarn or npm
+- Expo CLI (`npm install -g expo-cli`)
+- Python 3.10 or higher
+- Django 4.2 or higher
+- PostgreSQL
 - Firebase project
 - AWS account
 - Razorpay merchant account
 - Google/OpenAI API keys for AI integration
+- Clerk account for authentication
 
 ### Installation
 ```bash
@@ -114,68 +128,115 @@ git clone https://github.com/akaashchitragar/ayushya.git
 # Navigate to the project directory
 cd ayushya
 
-# Install dependencies
-flutter pub get
+# Frontend setup
+cd frontend
+yarn install
+# or
+npm install
 
-# Run the app
-flutter run
+# Backend setup
+cd ../backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+
+# Start the development servers
+# Terminal 1 - Frontend
+cd frontend
+expo start
+
+# Terminal 2 - Backend
+cd backend
+python manage.py runserver
 ```
 
-### Building APK
+### Building for Production
 ```bash
-# Build a release APK
-flutter build apk
+# Build for Android
+expo build:android
 
-# The APK will be available at:
-# build/app/outputs/flutter-apk/app-release.apk
+# Generate optimized native code (with EAS)
+eas build --platform android
 
-# Build a debug APK
-flutter build apk --debug
-
-# Build split APKs by architecture (smaller size)
-flutter build apk --split-per-abi
-
-# Install directly to a connected device
-flutter install
+# Preview with development builds
+eas build --profile development --platform android
 ```
 
 ### Environment Setup
-Create a `.env` file in the root directory with the following variables:
+Create a `.env` file in the frontend directory with the following variables:
 ```
-SUPABASE_URL=https://izfnriaczcaplztpjqvj.supabase.co
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml6Zm5yaWFjemNhcGx6dHBqcXZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYxMDY5MjIsImV4cCI6MjA2MTY4MjkyMn0.0NdDQ0pgtmsex_qsO5r4OtejN4HFhHSAX2WWtbG06qM
+REACT_APP_CLERK_PUBLISHABLE_KEY=pk_test_*****
+REACT_APP_API_URL=http://localhost:8000/api
+REACT_APP_GOOGLE_AI_API_KEY=AIzaSyD5xr3CEnK7grZ16_aJmpLh7bfUOVwipuY
+```
+
+Create a `.env` file in the backend directory with the following variables:
+```
+SECRET_KEY=your-django-secret-key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=postgres://user:password@localhost:5432/ayushya
+CLERK_SECRET_KEY=sk_test_*****
 GOOGLE_AI_API_KEY=AIzaSyD5xr3CEnK7grZ16_aJmpLh7bfUOVwipuY
 OPENAI_API_KEY=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
+AWS_ACCESS_KEY_ID=your-aws-access-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+AWS_STORAGE_BUCKET_NAME=ayushya-storage
 ```
 
 ## Project Structure
 ```
 ayushya/
-├── lib/
-│   ├── components/           # Reusable UI components
-│   ├── models/               # Data models and state
-│   ├── screens/              # App screens
-│   │   ├── auth/             # Authentication screens
-│   │   ├── profile/          # Profile management screens
-│   │   ├── consultation/     # Consultation screens
-│   │   └── remedies/         # Remedy display screens
-│   ├── services/             # API and backend services
-│   │   ├── ai_service.dart   # AI integration
-│   │   ├── auth_service.dart # Authentication
-│   │   └── database.dart     # Database operations
-│   ├── utils/                # Utility functions and constants
-│   │   ├── theme.dart        # App theming
-│   │   └── constants.dart    # App constants
-│   └── main.dart             # App entry point
-├── assets/                   # Static assets
-│   ├── images/               # Images and illustrations
-│   ├── fonts/                # Custom fonts
-│   ├── animations/           # Lottie animations
-│   └── translations/         # Localization files
-├── android/                  # Android-specific code
-├── ios/                      # iOS-specific code
-├── test/                     # Test cases
-└── pubspec.yaml              # Dependencies
+├── frontend/
+│   ├── src/
+│   │   ├── components/           # Reusable UI components
+│   │   ├── models/               # TypeScript interfaces and data models
+│   │   ├── screens/              # App screens
+│   │   │   ├── auth/             # Authentication screens
+│   │   │   ├── profile/          # Profile management screens
+│   │   │   ├── consultation/     # Consultation screens
+│   │   │   └── remedies/         # Remedy display screens
+│   │   ├── services/             # API and backend services
+│   │   │   ├── aiService.js      # AI integration
+│   │   │   ├── authService.js    # Authentication
+│   │   │   └── api.js            # API calls
+│   │   ├── utils/                # Utility functions and constants
+│   │   │   ├── theme.js          # App theming
+│   │   │   └── constants.js      # App constants
+│   │   └── App.js                # App entry point
+│   ├── assets/                   # Static assets
+│   │   ├── images/               # Images and illustrations
+│   │   ├── fonts/                # Custom fonts
+│   │   ├── animations/           # Lottie animations
+│   │   └── translations/         # Localization files
+│   ├── android/                  # Android-specific code
+│   ├── app.json                  # Expo configuration
+│   ├── babel.config.js           # Babel configuration
+│   ├── metro.config.js           # Metro bundler configuration
+│   ├── eas.json                  # EAS Build configuration
+│   ├── package.json              # Dependencies
+│   └── tsconfig.json             # TypeScript configuration (if using TypeScript)
+├── backend/
+│   ├── ayushya/                  # Django project directory
+│   │   ├── settings.py           # Django settings
+│   │   ├── urls.py               # URL routing
+│   │   └── wsgi.py               # WSGI configuration
+│   ├── api/                      # Django app for API
+│   │   ├── models.py             # Database models
+│   │   ├── serializers.py        # DRF serializers
+│   │   ├── views.py              # API views
+│   │   └── urls.py               # API URL routing
+│   ├── authentication/           # Django app for Clerk auth
+│   │   ├── middleware.py         # JWT verification
+│   │   └── utils.py              # Auth utilities
+│   ├── ai/                       # Django app for AI integration
+│   │   ├── gemini_service.py     # Gemini API integration
+│   │   ├── openai_service.py     # OpenAI API integration
+│   │   └── views.py              # AI API endpoints
+│   ├── manage.py                 # Django management script
+│   └── requirements.txt          # Python dependencies
+└── README.md                     # Project documentation
 ```
 
 ## Contributing
